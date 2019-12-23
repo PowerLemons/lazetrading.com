@@ -1,3 +1,5 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/lib/email.php";?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,15 +24,25 @@
       
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/338c043e7f.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
-    <script>var scroll = new SmoothScroll('a[href*="#"]');</script>
+    <script type='text/javascript'>
+    $(window).load(function(){
+    $(document).ready(function () {
+        $("#btn-submit").button();
+        $("#btn-submit").click(function () {
+            $(this).button('loading');
+            setTimeout(function () {
+                $("#btn-submit").button('reset').addClass("btn-success").setAttribute('disabled', 'disabled').prop('value', 'Sent!');
+            }, 2000);
+        });
+    });
+    });//]]>  
+    </script>
 
-    <title>Laze Trading - Pricing</title>
+    <title>Laze Trading - About Us</title>
   </head>
-  <body class="bg-white">
+  <body>
 
-
-  <!-- MODALS
+   <!-- MODALS
     ================================================== -->
     <!-- Quote -->
     <div class="modal fade" id="modalQuote" tabindex="-1" role="dialog" aria-labelledby="modalQuote" aria-hidden="true">
@@ -65,7 +77,7 @@
 
                   <!-- First name -->
                   <div class="form-label-group">
-                    <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal" placeholder="First Name" required>
+                    <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal" placeholder="First Name" name="first_name" required>
                     <label for="registrationFirstNameModal">First Name</label>
                   </div>
 
@@ -74,7 +86,7 @@
 
                   <!-- Last name -->
                   <div class="form-label-group">
-                    <input type="text" class="form-control form-control-flush" id="registrationLastNameModal" placeholder="Last Name" required>
+                    <input type="text" class="form-control form-control-flush" id="registrationLastNameModal" placeholder="Last Name" name="last_name" required>
                     <label for="registrationLastNameModal">Last Name</label>
                   </div>
 
@@ -85,7 +97,7 @@
 
                   <!-- Company Name -->
                   <div class="form-label-group">
-                    <input type="text" class="form-control form-control-flush" id="registrationCompanyNameModal" placeholder="Company Name" required>
+                    <input type="text" class="form-control form-control-flush" id="registrationCompanyNameModal" placeholder="Company Name" name="company_name" required>
                     <label for="registrationCompanyNameModal">Company Name</label>
                   </div>
 
@@ -94,7 +106,7 @@
 
                   <!-- Email -->
                   <div class="form-label-group">
-                    <input type="email" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email" required>
+                    <input type="email" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email" name="email" required>
                     <label for="registrationEmailModal">Email</label>
                   </div>
 
@@ -104,7 +116,7 @@
                 <div class="col-12">
                   <!-- Alibaba Store Link -->
                   <div class="form-label-group">
-                    <input type="text" class="form-control form-control-flush" id="registrationAlibabaStoreModal" placeholder="Alibaba Store URL" required>
+                    <input type="text" class="form-control form-control-flush" id="registrationAlibabaStoreModal" placeholder="Alibaba Store URL" name="alibaba_url" required>
                     <label for="registrationAlibabaStoreModal">Alibaba Store URL</label>
                   </div>
                 </div>
@@ -113,7 +125,7 @@
                 <div class="col-12">
                   <!-- Main Product Line? -->
                   <div class="form-label-group">
-                    <input type="text" class="form-control form-control-flush" id="registrationProductLineModal" placeholder="What is your main product line?" required>
+                    <input type="text" class="form-control form-control-flush" id="registrationProductLineModal" placeholder="What is your company's main product line?" name="product_line" required>
                     <label for="registrationProductLineModal">What is your main product line?</label>
                   </div>
                 </div>
@@ -122,7 +134,7 @@
                 <div class="col-12">
               
                   <!-- Submit -->
-                  <button class="btn btn-block btn-primary mt-3 lift">
+                  <button type="submit" name="submit" value="Submit" class="btn btn-block btn-primary mt-3 lift" data-loading-text="<div class=&quot;spinner-grow text-primary mb-1&quot; role=&quot;status&quot;><span class=&quot;sr-only&quot;>Loading...</span></div>">
                     Submit
                   </button>
 
@@ -134,10 +146,10 @@
         </div>
       </div>
     </div>
-      
+    
     <!-- NAVBAR
     ================================================== -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white" id="form">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
 
         <!-- Brand -->
@@ -182,316 +194,304 @@
       </div>
     </nav>
 
+
     <!-- WELCOME
     ================================================== -->
-    <section class="pt-10 pt-md-10 pb-10 pb-md-15 bg-primary">
-
-      <!-- Shape -->
-      <div class="shape shape-blur-3 svg-shim text-white">
-        <svg viewBox="0 0 1738 487" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0H1420.92C1420.92 0 2134.35 457.505 1420.92 485.868C707.502 514.231 0 0 0 0Z" fill="url(#paint0_linear)"/>
-          <defs>
-            <linearGradient id="paint0_linear" x1="0" y1="0" x2="1049.98" y2="912.68" gradientUnits="userSpaceOnUse">
-            <stop stop-color="currentColor" stop-opacity="0.075"/>
-            <stop offset="1" stop-color="currentColor" stop-opacity="0"/>
-          </linearGradient>
-          </defs>
-        </svg>
-      </div>
-
-      <!-- Content -->
+    <section class="py-8 py-md-11 border-bottom">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-10 col-lg-8 text-center">
             
             <!-- Heading -->
-            <h1 class="display-3 text-white">
-              Personalized pricing for all.
+            <h1 class="display-2">
+              We're Go-Getters.
             </h1>
 
             <!-- Text -->
-            <p class="lead text-white-80 mb-6 mb-md-8">
-              Fill out the form below and we'll get back to you by email with a personalized quote within 24-48 hours.
-            </p>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-
-    </section>
-
-    <!-- SHAPE
-    ================================================== -->
-    <div class="position-relative">
-      <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
-        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"/>
-        </svg>
-      </div>
-    </div>
-
-    <!-- FORM
-    ================================================== -->
-    <section class="mt-n8 mt-md-n15">
-      <div class="container" style="max-width: 35rem;">
-        <!-- Card -->
-        <div class="card shadow-light-lg lift lift-lg">
-
-        <!-- Body -->
-        <div class="card-body">
-
-        <!-- Form -->
-        <form>
-          <div class="row">
-            <div class="col-12 col-md-6">
-
-              <!-- First name -->
-              <div class="form-label-group">
-                <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal" placeholder="First Name" required>
-                <label for="registrationFirstNameModal">First Name</label>
-              </div>
-
-            </div>
-            <div class="col-12 col-md-6">
-
-              <!-- Last name -->
-              <div class="form-label-group">
-                <input type="text" class="form-control form-control-flush" id="registrationLastNameModal" placeholder="Last Name" required>
-                <label for="registrationLastNameModal">Last Name</label>
-              </div>
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-6">
-
-              <!-- Company Name -->
-              <div class="form-label-group">
-                <input type="text" class="form-control form-control-flush" id="registrationCompanyNameModal" placeholder="Company Name" required>
-                <label for="registrationCompanyNameModal">Company Name</label>
-              </div>
-
-            </div>
-            <div class="col-12 col-md-6">
-
-              <!-- Email -->
-              <div class="form-label-group">
-                <input type="email" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email" required>
-                <label for="registrationEmailModal">Email</label>
-              </div>
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <!-- Alibaba Store Link -->
-              <div class="form-label-group">
-                <input type="text" class="form-control form-control-flush" id="registrationAlibabaStoreModal" placeholder="Alibaba Store URL" required>
-                <label for="registrationAlibabaStoreModal">Alibaba Store URL</label>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <!-- Main Product Line? -->
-              <div class="form-label-group">
-                <input type="text" class="form-control form-control-flush" id="registrationProductLineModal" placeholder="What is your main product line?" required>
-                <label for="registrationProductLineModal">What is your main product line?</label>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-
-              <!-- Submit -->
-              <button class="btn btn-block btn-primary mt-3 lift">
-                Submit
-              </button>
-
-            </div>
-          </div>
-        </form>
-
-          </div>
-
-        </div>
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- FAQ
-    ================================================== -->
-    <section class="py-8 py-md-11 bg-white border-bottom">
-      <div class="container pt-8 pt-md-1">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-md-8 text-center">
-            
-            <!-- Badge -->
-            <span class="badge badge-pill badge-primary-desat-soft mb-3">
-              <span class="h6 text-uppercase">FAQ</span>
-            </span>
-
-            <!-- Heading -->
-            <h2>
-              Frequently asked questions.
-            </h2>
-
-            <!-- Text -->
-            <p class="font-size-lg text-muted mb-7 mb-md-9">
-              Let us answer the most common questions you might have.
+            <p class="lead text-muted mb-7 mb-md-9">
+              We exist to connect manufacturers of the world to the US market.
             </p>
 
           </div>
         </div> <!-- / .row -->
         <div class="row">
-          <div class="col-12 col-md-6">
-
-            <!-- Item -->
-            <div class="d-flex">
-
-              <!-- Badge -->
-              <div class="badge badge-lg badge-rounded-circle badge-primary">
-                <span>?</span>
-              </div>
-
-              <div class="ml-5">
-
-                <!-- Heading -->
-                <h3>
-                  Is the setup fee paid as a credit for the % commission, or is it a separate fee?
-                </h3>
-
-                <!-- Text -->
-                <p class="text-gray-800 mb-6 mb-md-8">
-                  It is a separate fee from the % commission.
-                </p>
+          <div class="col-12">
+            
+            <!-- Image -->
+            <div class="form-row">
+              <div class="col-4">
+                
+                <img src="https://landkit.goodthemes.co/assets/img/photos/photo-16.jpg" class="img-fluid rounded shadow-lg" alt="...">
 
               </div>
+              <div class="col-3">
 
-            </div>
+                <img src="https://landkit.goodthemes.co/assets/img/photos/photo-17.jpg" class="img-fluid rounded shadow-lg mb-4" alt="...">
 
-            <!-- Item -->
-            <div class="d-flex">
-
-              <!-- Badge -->
-              <div class="badge badge-lg badge-rounded-circle badge-primary">
-                <span>?</span>
-              </div>
-
-              <div class="ml-5">
-
-                <!-- Heading -->
-                <h3>
-                  Is it safe for us to pay you?
-                </h3>
-
-                <!-- Text -->
-                <p class="text-gray-800 mb-6 mb-md-0">
-                  We understand your concern. Our agency is in Canada which may be very different and far away from your country. <a href="./about">Please read our About Us page to learn more about the background of our company.</a>
-                </p>
+                <img src="https://landkit.goodthemes.co/assets/img/photos/photo-18.jpg" class="img-fluid rounded shadow-lg mt-1" alt="...">
 
               </div>
+              <div class="col-5">
 
-            </div>
+                <div class="form-row mb-4">
+                  <div class="col-5">
+                    
+                    <img src="https://landkit.goodthemes.co/assets/img/photos/photo-19.jpg" class="img-fluid rounded shadow-lg" alt="...">
 
-          </div>
-          <div class="col-12 col-md-6">
+                  </div>
+                  <div class="col-7">
+                    
+                    <img src="https://landkit.goodthemes.co/assets/img/photos/photo-20.jpg" class="img-fluid rounded shadow-lg" alt="...">
 
-            <!-- Item -->
-            <div class="d-flex">
+                  </div>
+                </div> <!-- / .row -->
 
-              <!-- Badge -->
-              <div class="badge badge-lg badge-rounded-circle badge-primary">
-                <span>?</span>
-              </div>
-
-              <div class="ml-5">
-
-                <!-- Heading -->
-                <h3>
-                    Who is your clientele?
-                </h3>
-
-                <!-- Text -->
-                <p class="text-gray-800 mb-6 mb-md-8">
-                    Most of our clients are manufacturers from around the world, and our other remaining clients are Amazon sellers in the US and Canada.
-                </p>
+                <img src="https://landkit.goodthemes.co/assets/img/photos/photo-21.jpg" class="img-fluid rounded shadow-lg mt-1" alt="...">
 
               </div>
-
-            </div>
-
-            <!-- Item -->
-            <div class="d-flex">
-
-              <!-- Badge -->
-              <div class="badge badge-lg badge-rounded-circle badge-primary">
-                <span>?</span>
-              </div>
-
-              <div class="ml-5">
-
-                <!-- Heading -->
-                <h3>
-                  Can we arrange a conference call?
-                </h3>
-
-                <!-- Text -->
-                <p class="text-gray-800 mb-6 mb-md-0">
-                  Yes! Feel free to invite your boss and other staff on this call. We would love to answer any questions you have. We can send you an agenda of the topics that we will discuss so that you can prepare any needed info and questions.
-                </p>
-
-              </div>
-
             </div>
 
           </div>
         </div> <!-- / .row -->
       </div> <!-- / .container -->
     </section>
-    <!-- TESTIMONIALS
+
+    <!-- LOCATION
+    ================================================== -->
+    <section class="pt-8 pt-md-0 border-bottom bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+
+            <!-- Map (mobile) -->
+            <div class="embed-responsive embed-responsive-1by1 d-md-none">
+              <div class="embed-responsive-item" data-toggle="map" data-options='{"center": [-118.244615, 34.052979], "zoom": 12}'></div>
+            </div>
+            
+            <!-- Map -->
+            <div class="position-relative h-100 vw-50 float-right d-none d-md-block">
+
+              <!-- Map -->
+              <div class="h-100 w-100" data-toggle="map" data-options='{"center": [-118.244615, 34.052979], "zoom": 12}'></div>
+              
+              <!-- Shape -->
+              <div class="shape shape-right shape-fluid-y svg-shim text-light">
+                <svg viewBox="0 0 100 1544" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 386V0H100V1544H50V1158L0 386Z" fill="currentColor"/>
+                </svg>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-12 col-md-6 col-lg-5 offset-lg-1 py-8 py-md-11 py-lg-12">
+            
+            <!-- Heading -->
+            <h2>
+              Located in Vancouver:<br>
+              <span class="text-success">- <span data-toggle="typed" data-options='{"strings": ["Cultural Diversity", "Scenic Mountains", "Great Outdoors", "Hollywood Blockbusters", "Scenic Lakes"]}'></span></span>
+            </h2>
+
+            <!-- Text -->
+            <p class="font-size-lg text-gray-700 mb-6">
+              We're located in Vancouver—the Western coastal seaport city of Canada! Our city is known for its scenic mountains &amp; lakes, and for its use as a film production center in many Hollywood blockbusters.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- VALUES 
+    ================================================== -->
+    <section class="pt-8 pt-md-11">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-md-6">
+            
+            <!-- Badge -->
+            <span class="badge badge-primary-desat-soft badge-pill mb-3">
+              <span class="h6 text-uppercase">
+                Values
+              </span>
+            </span>
+
+            <!-- Heading -->
+            <h2>
+              We care about everyone, <br>
+              <span class="text-primary-desat">but employees are first</span>.
+            </h2>
+
+            <!-- Text -->
+            <p class="font-size-lg text-muted mb-6 mb-md-0">
+              No matter your job title or department, if you're a member of our team you are our top priority. We can deeply about everyone who works with us.
+            </p>
+
+          </div>
+          <div class="col-12 col-md-6 col-xl-5">
+
+            <div class="row no-gutters">
+              <div class="col-4">
+                
+                <!-- Image -->
+                <div class="w-150 mt-9 p-1 bg-white shadow-lg">
+                  <img src="https://landkit.goodthemes.co/assets/img/photos/photo-13.jpg" class="img-fluid" alt="...">
+                </div>
+
+              </div>
+              <div class="col-4">
+                
+                <!-- Image -->
+                <div class="w-150 p-1 bg-white shadow-lg">
+                  <img src="https://landkit.goodthemes.co/assets/img/photos/photo-14.jpg" class="img-fluid" alt="...">
+                </div>
+
+              </div>
+              <div class="col-4 position-relative">
+                
+                <!-- Image -->
+                <div class="w-150 mt-11 float-right p-1 bg-white shadow-lg">
+                  <img src="https://landkit.goodthemes.co/assets/img/photos/photo-15.jpg" class="img-fluid" alt="...">
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- BENEFITS
     ================================================== -->
     <section class="py-8 py-md-11">
       <div class="container">
-        <div class="row align-items-stretch">
-          <div class="col-12 col-md-5">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-md-5 order-md-2">
             
-            <!-- Blockquote -->
-            <blockquote class="blockquote text-center">
-              
-              <!-- Text -->
-              <p class="mb-5 mb-md-7">
-                "We launched our first product with Laze about a year ago, and now we do $15k a month in revenue!”
-              </p>
+            <!-- Badge -->
+            <span class="badge badge-success-soft badge-pill mb-3">
+              <span class="h6 text-uppercase">
+                Benefits
+              </span>
+            </span>
 
-              <!-- Footer -->
-              <footer class="blockquote-footer mb-8 mb-md-0">
-                <div class="avatar mr-3">
-                  <img src="https://landkit.goodthemes.co/assets/img/avatars/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
-                </div> <span class="h6 text-uppercase">Minh Tran</span>
-              </footer>
+            <!-- Heading -->
+            <h2>
+              We'll take of you with <br>
+              <span class="text-success">a great benefits package</span>.
+            </h2>
 
-            </blockquote>
+            <!-- Text -->
+            <p class="font-size-lg text-muted mb-6 mb-md-0">
+              We put our money where our mouthes are. Once you're part of our team, we're going to take the best possible care of you with tons of benefits and perks unavailable anywhere else.
+            </p>
 
           </div>
-          <div class="col-12 col-md-1 border-right my-n8 my-md-n11 d-none d-md-block"></div>
-          <div class="col-12 col-md-5 offset-md-1">
+          <div class="col-12 col-md-6 order-md-1">
             
-            <!-- Blockquote -->
-            <blockquote class="blockquote text-center">
-              
-              <!-- Text -->
-              <p class="mb-5 mb-md-7">
-                “Our company has worked with Laze, and we're super impressed by their responsive &amp; knowledgeable support about Amazon.”
-              </p>
+            <!-- Card -->
+            <div class="card card-border border-success shadow-lg">
+              <div class="card-body">
+                
+                <!-- List group -->
+                <div class="list-group list-group-flush">
+                  <div class="list-group-item d-flex align-items-center">
+                    
+                    <!-- Text -->
+                    <div class="mr-auto">
+                      
+                      <!-- Heading -->
+                      <p class="font-weight-bold mb-1">
+                        Comprehensive benefits
+                      </p>
 
-              <!-- Footer -->
-              <footer class="blockquote-footer mb-0">
-                <div class="avatar mr-3">
-                  <img src="https://landkit.goodthemes.co/assets/img/avatars/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
-                </div> <span class="h6 text-uppercase">Donald Kim</span>
-              </footer>
+                      <!-- Text -->
+                      <p class="font-size-sm text-muted mb-0">
+                        Health, dental, vision, 401k, and more.
+                      </p>
 
-            </blockquote>
+                    </div>
+                      
+                    <!-- Check -->
+                    <div class="badge badge-rounded-circle badge-success-soft ml-4">
+                      <i class="fe fe-check"></i>
+                    </div>
+
+                  </div>
+                  <div class="list-group-item d-flex align-items-center">
+                      
+                    <!-- Text -->                
+                    <div class="mr-auto">
+                      
+                      <!-- Heading -->
+                      <p class="font-weight-bold mb-1">
+                        Unlimited time off
+                      </p>
+
+                      <!-- Text -->
+                      <p class="font-size-sm text-muted mb-0">
+                        Vacation on your own terms.
+                      </p>
+
+                    </div>
+                      
+                    <!-- Check -->
+                    <div class="badge badge-rounded-circle badge-success-soft ml-4">
+                      <i class="fe fe-check"></i>
+                    </div>
+
+                  </div>
+                  <div class="list-group-item d-flex align-items-center">
+                      
+                    <!-- Text -->
+                    <div class="mr-auto">
+                      
+                      <!-- Heading -->
+                      <p class="font-weight-bold mb-1">
+                        Cutting edge hardware
+                      </p>
+
+                      <!-- Text -->
+                      <p class="font-size-sm text-muted mb-0">
+                        We provide brand new computers and phones.
+                      </p>
+
+                    </div>
+                      
+                    <!-- Check -->
+                    <div class="badge badge-rounded-circle badge-success-soft ml-4">
+                      <i class="fe fe-check"></i>
+                    </div>
+
+                  </div>
+                  <div class="list-group-item d-flex align-items-center">
+                      
+                    <!-- Text -->
+                    <div class="mr-auto">
+                      
+                      <!-- Heading -->
+                      <p class="font-weight-bold mb-1">
+                        Moving assistance
+                      </p>
+
+                      <!-- Text -->
+                      <p class="font-size-sm text-muted mb-0">
+                        We will help you get here to work with us!
+                      </p>
+
+                    </div>
+                      
+                    <!-- Check -->
+                    <div class="badge badge-rounded-circle badge-success-soft ml-4">
+                      <i class="fe fe-check"></i>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
 
           </div>
         </div> <!-- / .row -->
@@ -521,9 +521,9 @@
             </p>
 
             <!-- Button -->
-            <a class="btn btn-success lift" href="#form">
+            <button class="btn btn-success lift" data-toggle="modal" data-target="#modalQuote">
               Get A Quote Now <i class="fe fe-arrow-right"></i>
-            </a>
+            </button>
 
           </div>
         </div> <!-- / .row -->
@@ -539,7 +539,7 @@
         </svg>
       </div>
     </div>
-  
+
    <!-- FOOTER
     ================================================== -->
     <footer class="py-8 py-md-10 bg-gray-200">

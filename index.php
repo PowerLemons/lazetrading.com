@@ -1,3 +1,5 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/lib/email.php";?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,6 +25,19 @@
 	<!-- Scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/338c043e7f.js" crossorigin="anonymous"></script>
+    <script type='text/javascript'>
+    $(window).load(function(){
+    $(document).ready(function () {
+        $("#btn-submit").button();
+        $("#btn-submit").click(function () {
+            $(this).button('loading');
+            setTimeout(function () {
+                $("#btn-submit").button('reset').addClass("btn-success").setAttribute('disabled', 'disabled').prop('value', 'Sent!');
+            }, 2000);
+        });
+    });
+    });//]]>  
+    </script>
 	
 	<!-- HTML5 Shiv -->
 	<!--[if lt IE 9]>
@@ -76,7 +91,7 @@
 
                   <!-- First name -->
                   <div class="form-label-group">
-                    <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal" placeholder="First Name" required>
+                    <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal" placeholder="First Name" name="first_name" required>
                     <label for="registrationFirstNameModal">First Name</label>
                   </div>
 
@@ -85,7 +100,7 @@
 
                   <!-- Last name -->
                   <div class="form-label-group">
-                    <input type="text" class="form-control form-control-flush" id="registrationLastNameModal" placeholder="Last Name" required>
+                    <input type="text" class="form-control form-control-flush" id="registrationLastNameModal" placeholder="Last Name" name="last_name" required>
                     <label for="registrationLastNameModal">Last Name</label>
                   </div>
 
@@ -96,7 +111,7 @@
 
                   <!-- Company Name -->
                   <div class="form-label-group">
-                    <input type="text" class="form-control form-control-flush" id="registrationCompanyNameModal" placeholder="Company Name" required>
+                    <input type="text" class="form-control form-control-flush" id="registrationCompanyNameModal" placeholder="Company Name" name="company_name" required>
                     <label for="registrationCompanyNameModal">Company Name</label>
                   </div>
 
@@ -105,7 +120,7 @@
 
                   <!-- Email -->
                   <div class="form-label-group">
-                    <input type="email" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email" required>
+                    <input type="email" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email" name="email" required>
                     <label for="registrationEmailModal">Email</label>
                   </div>
 
@@ -115,7 +130,7 @@
                 <div class="col-12">
                   <!-- Alibaba Store Link -->
                   <div class="form-label-group">
-                    <input type="text" class="form-control form-control-flush" id="registrationAlibabaStoreModal" placeholder="Alibaba Store URL" required>
+                    <input type="text" class="form-control form-control-flush" id="registrationAlibabaStoreModal" placeholder="Alibaba Store URL" name="alibaba_url" required>
                     <label for="registrationAlibabaStoreModal">Alibaba Store URL</label>
                   </div>
                 </div>
@@ -124,7 +139,7 @@
                 <div class="col-12">
                   <!-- Main Product Line? -->
                   <div class="form-label-group">
-                    <input type="text" class="form-control form-control-flush" id="registrationProductLineModal" placeholder="What is your company's main product line?" required>
+                    <input type="text" class="form-control form-control-flush" id="registrationProductLineModal" placeholder="What is your company's main product line?" name="product_line" required>
                     <label for="registrationProductLineModal">What is your main product line?</label>
                   </div>
                 </div>
@@ -133,7 +148,7 @@
                 <div class="col-12">
               
                   <!-- Submit -->
-                  <button class="btn btn-block btn-primary mt-3 lift">
+                  <button type="submit" name="submit" value="Submit" class="btn btn-block btn-primary mt-3 lift" data-loading-text="<div class=&quot;spinner-grow text-primary mb-1&quot; role=&quot;status&quot;><span class=&quot;sr-only&quot;>Loading...</span></div>">
                     Submit
                   </button>
 
