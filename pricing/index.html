@@ -48,11 +48,32 @@
     });
     });//]]>  
     </script>
+      
+    <!-- Internationalization -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.messagestore.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.fallbacks.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.language.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.parser.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.emitter.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/bs.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/dsb.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/fi.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/ga.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/he.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/hsb.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/hu.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/hy.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/la.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/ml.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/os.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/ru.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/sl.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/uk.min.js"></script>
 
     <title>Laze Trading - Pricing</title>
   </head>
   <body class="bg-white">
-
 
   <!-- MODALS
     ================================================== -->
@@ -73,12 +94,12 @@
             </div>
 
             <!-- Heading -->
-            <h2 class="font-weight-bold text-center mb-1" id="modalExampleTitle">
+            <h2 data-i18n="modal-quote-title" class="font-weight-bold text-center mb-1" id="modalExampleTitle">
               Request A Quote
             </h2>
 
             <!-- Text -->
-            <p class="font-size-lg text-center text-muted mb-6 mb-md-8">
+            <p data-i18n="modal-quote-subtitle" class="font-size-lg text-center text-muted mb-6 mb-md-8">
               Let's start selling your company's products on Amazon.
             </p>
 
@@ -90,7 +111,7 @@
                   <!-- First name -->
                   <div class="form-label-group">
                     <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal" placeholder="First Name" name="first_name" required>
-                    <label for="registrationFirstNameModal">First Name</label>
+                    <label data-i18n="modal-quote-firstname" for="registrationFirstNameModal">First Name</label>
                   </div>
 
                 </div>
@@ -99,7 +120,7 @@
                   <!-- Last name -->
                   <div class="form-label-group">
                     <input type="text" class="form-control form-control-flush" id="registrationLastNameModal" placeholder="Last Name" name="last_name" required>
-                    <label for="registrationLastNameModal">Last Name</label>
+                    <label data-i18n="modal-quote-lastname" for="registrationLastNameModal">Last Name</label>
                   </div>
 
                 </div>
@@ -110,7 +131,7 @@
                   <!-- Company Name -->
                   <div class="form-label-group">
                     <input type="text" class="form-control form-control-flush" id="registrationCompanyNameModal" placeholder="Company Name" name="company_name" required>
-                    <label for="registrationCompanyNameModal">Company Name</label>
+                    <label data-i18n="modal-quote-companyname" for="registrationCompanyNameModal">Company Name</label>
                   </div>
 
                 </div>
@@ -119,7 +140,7 @@
                   <!-- Email -->
                   <div class="form-label-group">
                     <input type="email" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email" name="email" required>
-                    <label for="registrationEmailModal">Email</label>
+                    <label data-i18n="modal-quote-email" for="registrationEmailModal">Email</label>
                   </div>
 
                 </div>
@@ -129,7 +150,7 @@
                   <!-- Alibaba Store Link -->
                   <div class="form-label-group">
                     <input type="text" class="form-control form-control-flush" id="registrationAlibabaStoreModal" placeholder="Alibaba Store URL" name="alibaba_url" required>
-                    <label for="registrationAlibabaStoreModal">Alibaba Store URL</label>
+                    <label data-i18n="modal-quote-alibabaurl" for="registrationAlibabaStoreModal">Alibaba Store URL</label>
                   </div>
                 </div>
               </div>
@@ -138,7 +159,7 @@
                   <!-- Main Product Line? -->
                   <div class="form-label-group">
                     <input type="text" class="form-control form-control-flush" id="registrationProductLineModal" placeholder="What is your company's main product line?" name="product_line" required>
-                    <label for="registrationProductLineModal">What is your main product line?</label>
+                    <label data-i18n="modal-quote-mainproductline" for="registrationProductLineModal">What is your main product line?</label>
                   </div>
                 </div>
               </div>
@@ -146,7 +167,7 @@
                 <div class="col-12">
               
                   <!-- Submit -->
-                  <button id="btn-submit" type="submit" name="submit" value="Submit" class="btn btn-block btn-primary mt-3 lift" data-loading-text="<div class=&quot;spinner-grow text-primary mb-1&quot; role=&quot;status&quot;><span class=&quot;sr-only&quot;>Loading...</span></div>">
+                  <button data-i18n="modal-quote-submit" id="btn-submit" type="submit" name="submit" value="Submit" class="btn btn-block btn-primary mt-3 lift" data-loading-text="<div class=&quot;spinner-grow text-primary mb-1&quot; role=&quot;status&quot;><span class=&quot;sr-only&quot;>Loading...</span></div>">
                     Submit
                   </button>
 
@@ -158,7 +179,7 @@
         </div>
       </div>
     </div>
-      
+
     <!-- NAVBAR
     ================================================== -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -185,24 +206,24 @@
           <!-- Navigation -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-              <a href="../about" class="nav-link" id="navbarAbout" aria-haspopup="true" aria-expanded="false">
+              <a data-i18n="navbar-about" href="../about" class="nav-link" id="navbarAbout" aria-haspopup="true" aria-expanded="false">
                 About
               </a>
             </li>
             <li class="nav-item dropdown">
-              <a href="../pricing" class="nav-link" id="navbarPricing" aria-haspopup="true" aria-expanded="false">
+              <a data-i18n="navbar-pricing" href="../pricing" class="nav-link" id="navbarPricing" aria-haspopup="true" aria-expanded="false">
                 Pricing
                 </a>
             </li>
             <li class="nav-item dropdown">
-              <a href="../choose" class="nav-link" id="navbarPricing" aria-haspopup="true" aria-expanded="false">
+              <a data-i18n="navbar-choose" href="../choose" class="nav-link" id="navbarPricing" aria-haspopup="true" aria-expanded="false">
                 Why Choose Laze?
                 </a>
             </li>
           </ul>
 
           <!-- Button -->
-          <button class="navbar-btn btn btn-sm btn-primary lift ml-auto" data-toggle="modal" data-target="#modalQuote">
+          <button data-i18n="navbar-quote" class="navbar-btn btn btn-sm btn-primary lift ml-auto" data-toggle="modal" data-target="#modalQuote">
             Get A Quote
           </button>
 
@@ -537,21 +558,21 @@
 
             <!-- Badge -->
             <span class="badge badge-pill badge-gray-700-soft mb-4">
-              <span class="h6 font-weight-bold text-uppercase">Get started</span>
+              <span data-i18n="cta-badge" class="h6 font-weight-bold text-uppercase">Get started</span>
             </span>
 
             <!-- Heading -->
-            <h1 class="display-4 text-white">
+            <h1 data-i18n="cta-heading" class="display-4 text-white">
               Start reaping the profits.
             </h1>
 
             <!-- Text -->
-            <p class="font-size-lg text-muted mb-6 mb-md-8">
+            <p data-i18n="cta-description" class="font-size-lg text-muted mb-6 mb-md-8">
                 Your international company has the factories and workers, but not the B2C expertise to make direct selling work. <b>Supercharge your company and your profit margins with our Amazon selling expertise.</b>
             </p>
 
             <!-- Button -->
-            <button class="btn btn-success lift" data-toggle="modal" data-target="#modalQuote">
+            <button data-i18n="cta-button" class="btn btn-success lift" data-toggle="modal" data-target="#modalQuote">
               Get A Quote Now <i class="fe fe-arrow-right"></i>
             </button>
 
@@ -569,7 +590,7 @@
         </svg>
       </div>
     </div>
-  
+
     <!-- FOOTER
     ================================================== -->
     <footer class="py-8 py-md-10 bg-gray-200">
@@ -578,26 +599,26 @@
         <img src="../assets/svg/laze_logo_1.svg" alt="..." width="120px" class="footer-brand img-fluid mb-2" max-width="100px">
 
         <!-- Text -->
-        <p class="text-gray-700 py-2 py-md-2">
+        <p data-i18n="footer-tagline" class="text-gray-700 py-2 py-md-2">
           The E-Commerce Gateway to the World
         </p>
 
         <div class="d-flex justify-content-center mb-2">
           <div class="pr-5">
             <h3 class="mb-0">
-                <a href="../about" class="nav-link">About Us</a>
+                <a data-i18n="footer-button-about" href="../about" class="nav-link">About Us</a>
             </h3>
           </div>
           <div class="border-left border-gray-300"></div>
           <div class="px-5">
             <h3 class="mb-0">
-                <a href="../choose" class="nav-link">Why Choose Laze?</a>
+                <a data-i18n="footer-button-choose" href="../choose" class="nav-link">Why Choose Laze?</a>
             </h3>
           </div>
           <div class="border-left border-gray-300"></div>
           <div class="px-5">
             <h3 class="mb-0">
-                <a href="../pricing" class="nav-link">Pricing</a>
+                <a data-i18n="footer-button-pricing" href="../pricing" class="nav-link">Pricing</a>
             </h3>
           </div>
         </div>

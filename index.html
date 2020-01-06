@@ -38,6 +38,28 @@
     });
     });//]]>  
     </script>
+      
+    <!-- Internationalization -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.messagestore.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.fallbacks.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.language.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.parser.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.emitter.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/bs.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/dsb.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/fi.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/ga.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/he.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/hsb.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/hu.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/hy.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/la.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/ml.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/os.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/ru.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/sl.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/languages/uk.min.js"></script>
 	
 	<!-- HTML5 Shiv -->
 	<!--[if lt IE 9]>
@@ -84,12 +106,12 @@
             </div>
 
             <!-- Heading -->
-            <h2 class="font-weight-bold text-center mb-1" id="modalExampleTitle">
+            <h2 data-i18n="modal-quote-title" class="font-weight-bold text-center mb-1" id="modalExampleTitle">
               Request A Quote
             </h2>
 
             <!-- Text -->
-            <p class="font-size-lg text-center text-muted mb-6 mb-md-8">
+            <p data-i18n="modal-quote-subtitle" class="font-size-lg text-center text-muted mb-6 mb-md-8">
               Let's start selling your company's products on Amazon.
             </p>
 
@@ -101,7 +123,7 @@
                   <!-- First name -->
                   <div class="form-label-group">
                     <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal" placeholder="First Name" name="first_name" required>
-                    <label for="registrationFirstNameModal">First Name</label>
+                    <label data-i18n="modal-quote-firstname" for="registrationFirstNameModal">First Name</label>
                   </div>
 
                 </div>
@@ -110,7 +132,7 @@
                   <!-- Last name -->
                   <div class="form-label-group">
                     <input type="text" class="form-control form-control-flush" id="registrationLastNameModal" placeholder="Last Name" name="last_name" required>
-                    <label for="registrationLastNameModal">Last Name</label>
+                    <label data-i18n="modal-quote-lastname" for="registrationLastNameModal">Last Name</label>
                   </div>
 
                 </div>
@@ -121,7 +143,7 @@
                   <!-- Company Name -->
                   <div class="form-label-group">
                     <input type="text" class="form-control form-control-flush" id="registrationCompanyNameModal" placeholder="Company Name" name="company_name" required>
-                    <label for="registrationCompanyNameModal">Company Name</label>
+                    <label data-i18n="modal-quote-companyname" for="registrationCompanyNameModal">Company Name</label>
                   </div>
 
                 </div>
@@ -130,7 +152,7 @@
                   <!-- Email -->
                   <div class="form-label-group">
                     <input type="email" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email" name="email" required>
-                    <label for="registrationEmailModal">Email</label>
+                    <label data-i18n="modal-quote-email" for="registrationEmailModal">Email</label>
                   </div>
 
                 </div>
@@ -140,7 +162,7 @@
                   <!-- Alibaba Store Link -->
                   <div class="form-label-group">
                     <input type="text" class="form-control form-control-flush" id="registrationAlibabaStoreModal" placeholder="Alibaba Store URL" name="alibaba_url" required>
-                    <label for="registrationAlibabaStoreModal">Alibaba Store URL</label>
+                    <label data-i18n="modal-quote-alibabaurl" for="registrationAlibabaStoreModal">Alibaba Store URL</label>
                   </div>
                 </div>
               </div>
@@ -149,7 +171,7 @@
                   <!-- Main Product Line? -->
                   <div class="form-label-group">
                     <input type="text" class="form-control form-control-flush" id="registrationProductLineModal" placeholder="What is your company's main product line?" name="product_line" required>
-                    <label for="registrationProductLineModal">What is your main product line?</label>
+                    <label data-i18n="modal-quote-mainproductline" for="registrationProductLineModal">What is your main product line?</label>
                   </div>
                 </div>
               </div>
@@ -157,7 +179,7 @@
                 <div class="col-12">
               
                   <!-- Submit -->
-                  <button id="btn-submit" type="submit" name="submit" value="Submit" class="btn btn-block btn-primary mt-3 lift" data-loading-text="<div class=&quot;spinner-grow text-primary mb-1&quot; role=&quot;status&quot;><span class=&quot;sr-only&quot;>Loading...</span></div>">
+                  <button data-i18n="modal-quote-submit" id="btn-submit" type="submit" name="submit" value="Submit" class="btn btn-block btn-primary mt-3 lift" data-loading-text="<div class=&quot;spinner-grow text-primary mb-1&quot; role=&quot;status&quot;><span class=&quot;sr-only&quot;>Loading...</span></div>">
                     Submit
                   </button>
 
@@ -196,24 +218,24 @@
           <!-- Navigation -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-              <a href="./about" class="nav-link" id="navbarAbout" aria-haspopup="true" aria-expanded="false">
+              <a data-i18n="navbar-about" href="./about" class="nav-link" id="navbarAbout" aria-haspopup="true" aria-expanded="false">
                 About
               </a>
             </li>
             <li class="nav-item dropdown">
-              <a href="./pricing" class="nav-link" id="navbarPricing" aria-haspopup="true" aria-expanded="false">
+              <a data-i18n="navbar-pricing" href="./pricing" class="nav-link" id="navbarPricing" aria-haspopup="true" aria-expanded="false">
                 Pricing
                 </a>
             </li>
             <li class="nav-item dropdown">
-              <a href="./choose" class="nav-link" id="navbarPricing" aria-haspopup="true" aria-expanded="false">
+              <a data-i18n="navbar-choose" href="./choose" class="nav-link" id="navbarPricing" aria-haspopup="true" aria-expanded="false">
                 Why Choose Laze?
                 </a>
             </li>
           </ul>
 
           <!-- Button -->
-          <button class="navbar-btn btn btn-sm btn-primary lift ml-auto" data-toggle="modal" data-target="#modalQuote">
+          <button data-i18n="navbar-quote" class="navbar-btn btn btn-sm btn-primary lift ml-auto" data-toggle="modal" data-target="#modalQuote">
             Get A Quote
           </button>
 
@@ -237,22 +259,22 @@
           <div class="col-12 col-md-7 col-lg-6 order-md-1" data-aos="fade-up">
 
             <!-- Heading -->
-            <h1 class="display-3 text-center text-md-left">
+            <h1 data-i18n="home-welcome-headline" class="display-3 text-center text-md-left">
                 Manufacturers deserve to profit <span class="text-primary">directly</span> on Amazon
             </h1>
 
             <!-- Text -->
-            <p class="lead text-center text-md-left text-muted mb-6 mb-lg-8">
+            <p data-i18n="home-welcome-description" class="lead text-center text-md-left text-muted mb-6 mb-lg-8">
               Manufacturers around the world sell on Amazon US to take advantage of huge B2C profit margins.<br><br>We’re the team to help you achieve your goals. Let's take your international company to the next level.
             </p>
 
             <!-- Submit -->
             
             <div class="text-center text-md-left">
-                <button class="btn btn-primary lift" data-toggle="modal" data-target="#modalQuote">
+                <button data-i18n="home-welcome-button-quote" class="btn btn-primary lift" data-toggle="modal" data-target="#modalQuote">
                 Get A Quote Now <i class="fe fe-arrow-right"></i>
                 </button>
-                <a href="./choose" class="btn btn-primary-soft lift">
+                <a data-i18n="home-welcome-button-why" href="./choose" class="btn btn-primary-soft lift">
                   Why Us?
                 </a>
             </div>
@@ -285,12 +307,12 @@
             </div>
 
             <!-- Heading -->
-            <h3>
+            <h3 data-i18n="home-features-middleman-title">
               Stop relying on your US middleman customers
             </h3>
 
             <!-- Text -->
-            <p class="text-muted mb-6 mb-md-0">
+            <p data-i18n="home-features-middleman-description" class="text-muted mb-6 mb-md-0">
               Reap the profits.
             </p>
 
@@ -313,12 +335,12 @@
             </div>
 
             <!-- Heading -->
-            <h3>
+            <h3 data-i18n="home-features-expertise-title">
               Succeed with our 7-figure Amazon selling expertise
             </h3>
 
             <!-- Text -->
-            <p class="text-muted mb-6 mb-md-0">
+            <p data-i18n="home-features-expertise-description" class="text-muted mb-6 mb-md-0">
               We know what it takes to win.
             </p>
 
@@ -341,12 +363,12 @@
             </div>
 
             <!-- Heading -->
-            <h3>
+            <h3 data-i18n="home-features-profit-title">
               Earn the humongous profits of an Amazon seller
             </h3>
 
             <!-- Text -->
-            <p class="text-muted mb-0">
+            <p data-i18n="home-features-profit-description" class="text-muted mb-0">
               30%+ profit margins are typical.
             </p>
 
@@ -363,17 +385,17 @@
           <div class="col-12 col-md-6">
             
             <!-- Preheading -->
-            <h6 class="text-uppercase text-primary font-weight-bold">
+            <h6 data-i18n="home-process-preheading" class="text-uppercase text-primary font-weight-bold">
               Process
             </h6>
 
             <!-- Heading -->
-            <h2>
+            <h2 data-i18n="home-process-heading">
                 We make it easy for your company<br><span class="text-primary">to sell on Amazon like a pro.</span>
             </h2>
 
             <!-- Text -->
-            <p class="lead text-muted mb-6 mb-md-0">
+            <p data-i18n="home-process-description" class="lead text-muted mb-6 mb-md-0">
               We're more than just consulting and advice. We walk you through the process and analyze pain points to make sure that your company is primed for success on Amazon.
             </p>
 
@@ -417,12 +439,12 @@
               <div class="col col-md-12 ml-n5 ml-md-0">
                 
                 <!-- Heading -->
-                <h3>
+                <h3 data-i18n="home-steps-step1-heading">
                   Contact us for a quote
                 </h3>
 
                 <!-- Text -->
-                <p class="text-muted mb-6 mb-md-0">
+                <p data-i18n="home-steps-step1-description" class="text-muted mb-6 mb-md-0">
                   <a href="/" data-toggle="modal" data-target="#modalQuote">Email us for a personalized quote.</a> We can arrange a conference call with your boss to hash out the details.
                 </p>
 
@@ -453,12 +475,12 @@
               <div class="col col-md-12 ml-n5 ml-md-0">
                 
                 <!-- Heading -->
-                <h3>
+                <h3 data-i18n="home-steps-step2-heading">
                   Get your 1st products on Amazon
                 </h3>
 
                 <!-- Text -->
-                <p class="text-muted mb-6 mb-md-0">
+                <p data-i18n="home-steps-step2-description" class="text-muted mb-6 mb-md-0">
                   We guide you through the process, like setting up an Amazon seller account &amp; choosing the right products to sell.
                 </p>
 
@@ -484,12 +506,12 @@
               <div class="col col-md-12 ml-n5 ml-md-0">
                 
                 <!-- Heading -->
-                <h3>
+                <h3 data-i18n="home-steps-step3-heading">
                   Scale &amp; Profit!
                 </h3>
 
                 <!-- Text -->
-                <p class="text-muted mb-0">
+                <p data-i18n="home-steps-step3-description" class="text-muted mb-0">
                     Rake in passive income. Scale your company by releasing more products on Amazon. <span class="text-success">The sky is the limit!</span>
                 </p>
 
@@ -518,13 +540,12 @@
           <div class="col-12 col-md-6 order-md-2" data-aos="fade-left">
 
             <!-- Heading -->
-            <h2>
-              We have the Amazon expertise<br>
-              <span class="text-primary">to make your company succeed</span>.
+            <h2 data-i18n="home-about-heading">
+              We have the Amazon expertise<br><span class="text-primary">to make your company succeed</span>.
             </h2>
 
             <!-- Text -->
-            <p class="font-size-lg text-muted mb-6">
+            <p data-i18n="home-about-description" class="font-size-lg text-muted mb-6">
               We've worked with 7-figure Amazon stores and know how to use the latest Amazon tactics out there, including the exclusive ones behind closed doors.
             </p>
 
@@ -549,12 +570,12 @@
               <div class="ml-5">
 
                 <!-- Heading -->
-                <h4 class="mb-1">
+                <h4 data-i18n="home-about-essentials-heading" class="mb-1">
                   We get the Amazon essentials right
                 </h4>
 
                 <!-- Text -->
-                <p class="text-muted mb-6">
+                <p data-i18n="home-about-essentials-description" class="text-muted mb-6">
                   We nail the most important parts about Amazon for you, so you don't have to worry about "getting it right"
                 </p>
 
@@ -581,12 +602,12 @@
               <div class="ml-5">
 
                 <!-- Heading -->
-                <h4 class="mb-1">
+                <h4 data-i18n="home-about-secret-heading" class="mb-1">
                   And we know the secret tactics too
                 </h4>
 
                 <!-- Text -->
-                <p class="text-muted mb-6 mb-md-0">
+                <p data-i18n="home-about-secret-description" class="text-muted mb-6 mb-md-0">
                 Whatever secretive Amazon tactic that is out there, we're in the know through our 7 and 8-figure connections
                 </p>
 
@@ -619,7 +640,7 @@
                 <div class="col-12">
               
                   <!-- Submit -->
-                  <button class="btn btn-block btn-primary lift" data-toggle="modal" data-target="#modalQuote">
+                  <button data-i18n="home-about-button-quote" class="btn btn-block btn-primary lift" data-toggle="modal" data-target="#modalQuote">
                     Get A Quote Now
                   </button>
 
@@ -659,13 +680,13 @@
           <div class="col-12 col-md-7 col-lg-6 order-md-1" data-aos="fade-right">
 
             <!-- Heading -->
-            <h2>
+            <h2 data-i18n="home-stats-heading">
               Do what your company does best. <br>
               <span class="text-primary">Let us handle everything else</span>.
             </h2>
 
             <!-- Text -->
-            <p class="font-size-lg text-gray-700 mb-6">
+            <p data-i18n="home-stats-description" class="font-size-lg text-gray-700 mb-6">
               Your company has different needs for selling on Amazon than other companies. We accommodate for all businesses, big and small.
             </p>
 
@@ -682,7 +703,7 @@
                   </div>
                   
                   <!-- Text -->
-                  <p class="text-primary">
+                  <p data-i18n="home-stats-list-productresearch" class="text-primary">
                     Product Research
                   </p>
 
@@ -696,7 +717,7 @@
                     <i class="fe fe-check"></i>
                   </div>
                   
-                  <p class="text-primary mb-lg-0">
+                  <p data-i18n="home-stats-list-sourcing" class="text-primary mb-lg-0">
                     Sourcing
                   </p>
 
@@ -714,7 +735,7 @@
                   </span>
                   
                   <!-- Text -->
-                  <p class="text-primary">
+                  <p data-i18n="home-stats-list-listingoptimization" class="text-primary">
                     Listing Optimization
                   </p>
 
@@ -729,7 +750,7 @@
                   </div>
                   
                   <!-- Text -->
-                  <p class="text-primary mb-0">
+                  <p data-i18n="home-stats-list-amazonseo" class="text-primary mb-0">
                     Amazon SEO
                   </p>
 
@@ -752,12 +773,12 @@
           <div class="col-12 col-md-10 col-lg-8 text-center">
 
             <!-- Heading -->
-            <h2>
+            <h2 data-i18n="home-testimonials-heading">
               Testimonials
             </h2>
 
             <!-- Text -->
-            <p class="font-size-lg text-muted mb-5 mb-md-8">
+            <p data-i18n="home-testimonials-subheading" class="font-size-lg text-muted mb-5 mb-md-8">
               We've worked with 7-figure Amazon stores in the past with glowing reviews.
             </p>
 
@@ -783,6 +804,12 @@
 
                       <!-- Image (placeholder) -->
                       <img src="./assets/img/photo-3.jpg" alt="..." class="img-fluid d-md-none invisible">
+
+                    </a>
+                    <a class="card-img-left bg-cover d-none d-md-block" style="background-image: url(./assets/img/photo-6.jpg);">
+
+                      <!-- Image (placeholder) -->
+                      <img src="./assets/img/photo-6.jpg" alt="..." class="img-fluid d-md-none invisible">
 
                     </a>
                   </div>
@@ -817,13 +844,13 @@
                           </div> <!-- / .row -->
 
                           <!-- Text -->
-                          <p class="mb-5 mb-md-7">
+                          <p data-i18n="home-testimonials-allen-review" class="mb-5 mb-md-7">
                             “Thanks for all your help Minh! You made everything relatively easy. The cost was well worth the ranking service. Can’t wait to launch my new products with you!”
                           </p>
 
                           <!-- Footer -->
                           <footer class="blockquote-footer">
-                            <span class="h6 text-uppercase">Allen Leung</span>
+                            <span data-i18n="home-testimonials-allen-name" class="h6 text-uppercase">Allen Leung</span>
                           </footer>
 
                         </blockquote>
@@ -848,13 +875,44 @@
                           </div> <!-- / .row -->
 
                           <!-- Text -->
-                          <p class="mb-5 mb-md-7">
+                          <p data-i18n="home-testimonials-jason-review" class="mb-5 mb-md-7">
                             “Thanks for helping me out every step of the way through my Amazon journey Minh! You really got out of your way to help me out and teach me at the same time. I learned and grew a lot! Thanks again man!”
                           </p>
 
                           <!-- Footer -->
                           <footer class="blockquote-footer">
-                            <span class="h6 text-uppercase">Jason Luong</span>
+                            <span data-i18n="home-testimonials-jason-name" class="h6 text-uppercase">Jason Luong</span>
+                          </footer>
+
+                        </blockquote>
+                      </div>
+
+                    </div>
+                    <div class="w-100">
+
+                      <!-- Body -->
+                      <div class="card-body">
+                        <blockquote class="blockquote text-center mb-0">
+
+                          <!-- Brand -->
+                          <div class="row justify-content-center mb-5 mb-md-7">
+                            <div class="col-6 col-sm-4 col-md-7 col-lg-5">
+
+                                <div class="avatar avatar-xxl">
+                                  <img src="./assets/img/photo-5.jpg" alt="..." class="avatar-img rounded-circle">
+                                </div>
+
+                            </div>
+                          </div> <!-- / .row -->
+
+                          <!-- Text -->
+                          <p data-i18n="home-testimonials-yasmin-review" class="mb-5 mb-md-7">
+                            “You gave me step-by-step guidance on how to optimize my Amazon listings, as well as launch and marketing campaigns. Your digital marketing and mentoring skills are exceptional. Above all, you showed genuine care throughout the journey. Thanks to you, Minh, things are simple now!”
+                          </p>
+
+                          <!-- Footer -->
+                          <footer class="blockquote-footer">
+                            <span data-i18n="home-testimonials-yasmin-name" class="h6 text-uppercase">Yasmin Varzidehkar</span>
                           </footer>
 
                         </blockquote>
@@ -899,12 +957,12 @@
               <div class="ml-5">
 
                 <!-- Heading -->
-                <h4 class="text-white">
+                <h4 data-i18n="home-faq-q1-question" class="text-white">
                   How does payment work?
                 </h4>
 
                 <!-- Text -->
-                <p class="text-muted mb-6 mb-md-8">
+                <p data-i18n="home-faq-q1-answer" class="text-muted mb-6 mb-md-8">
                   It is a setup fee plus a % commission of your Amazon gross sales. The setup fee is a separate fee from the % commission.
                 </p>
 
@@ -923,12 +981,12 @@
               <div class="ml-5">
 
                 <!-- Heading -->
-                <h4 class="text-white">
+                <h4 data-i18n="home-faq-q2-question" class="text-white">
                   Is it safe for us to pay you?
                 </h4>
 
                 <!-- Text -->
-                <p class="text-muted mb-6 mb-md-0">
+                <p data-i18n="home-faq-q2-answer" class="text-muted mb-6 mb-md-0">
                   We understand your concern. Our agency is in Canada which may be very different and far away from your country. <a href="./choose">Please read our Why Us page to learn more about our case studies, values, and guarantee.</a>
                 </p>
 
@@ -950,12 +1008,12 @@
               <div class="ml-5">
 
                 <!-- Heading -->
-                <h4 class="text-white">
+                <h4 data-i18n="home-faq-q3-question" class="text-white">
                     Who is your clientele?
                 </h4>
 
                 <!-- Text -->
-                <p class="text-muted mb-6 mb-md-8">
+                <p data-i18n="home-faq-q3-answer" class="text-muted mb-6 mb-md-8">
                     Most of our clients are manufacturers from around the world, and our other remaining clients are Amazon sellers in the US and Canada.
                 </p>
 
@@ -974,12 +1032,12 @@
               <div class="ml-5">
 
                 <!-- Heading -->
-                <h4 class="text-white">
+                <h4 data-i18n="home-faq-q4-question" class="text-white">
                   Can we arrange a conference call?
                 </h4>
 
                 <!-- Text -->
-                <p class="text-muted mb-6 mb-md-0">
+                <p data-i18n="home-faq-q4-answer" class="text-muted mb-6 mb-md-0">
                   Yes! Feel free to invite your boss and other staff on this call. We would love to answer any questions you have. We can send you an agenda of the topics that we will discuss so that you can prepare any needed info and questions.
                 </p>
 
@@ -1001,21 +1059,21 @@
 
             <!-- Badge -->
             <span class="badge badge-pill badge-gray-700-soft mb-4">
-              <span class="h6 font-weight-bold text-uppercase">Get started</span>
+              <span data-i18n="cta-badge" class="h6 font-weight-bold text-uppercase">Get started</span>
             </span>
 
             <!-- Heading -->
-            <h1 class="display-4 text-white">
+            <h1 data-i18n="cta-heading" class="display-4 text-white">
               Start reaping the profits.
             </h1>
 
             <!-- Text -->
-            <p class="font-size-lg text-muted mb-6 mb-md-8">
+            <p data-i18n="cta-description" class="font-size-lg text-muted mb-6 mb-md-8">
                 Your international company has the factories and workers, but not the B2C expertise to make direct selling work. <b>Supercharge your company and your profit margins with our Amazon selling expertise.</b>
             </p>
 
             <!-- Button -->
-            <button class="btn btn-success lift" data-toggle="modal" data-target="#modalQuote">
+            <button data-i18n="cta-button" class="btn btn-success lift" data-toggle="modal" data-target="#modalQuote">
               Get A Quote Now <i class="fe fe-arrow-right"></i>
             </button>
 
@@ -1042,26 +1100,26 @@
         <img src="./assets/svg/laze_logo_1.svg" alt="..." width="120px" class="footer-brand img-fluid mb-2" max-width="100px">
 
         <!-- Text -->
-        <p class="text-gray-700 py-2 py-md-2">
+        <p data-i18n="footer-tagline" class="text-gray-700 py-2 py-md-2">
           The E-Commerce Gateway to the World
         </p>
 
         <div class="d-flex justify-content-center mb-2">
           <div class="pr-5">
             <h3 class="mb-0">
-                <a href="./about" class="nav-link">About Us</a>
+                <a data-i18n="footer-button-about" href="./about" class="nav-link">About Us</a>
             </h3>
           </div>
           <div class="border-left border-gray-300"></div>
           <div class="px-5">
             <h3 class="mb-0">
-                <a href="./choose" class="nav-link">Why Choose Laze?</a>
+                <a data-i18n="footer-button-choose" href="./choose" class="nav-link">Why Choose Laze?</a>
             </h3>
           </div>
           <div class="border-left border-gray-300"></div>
           <div class="px-5">
             <h3 class="mb-0">
-                <a href="./pricing" class="nav-link">Pricing</a>
+                <a data-i18n="footer-button-pricing" href="./pricing" class="nav-link">Pricing</a>
             </h3>
           </div>
         </div>
