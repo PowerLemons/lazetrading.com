@@ -500,14 +500,14 @@
 
             <!-- Map (mobile) -->
             <div class="embed-responsive embed-responsive-1by1 d-md-none">
-              <div class="embed-responsive-item" data-toggle="map" data-options='{"center": [-118.244615, 34.052979], "zoom": 12}'></div>
+              <div class="embed-responsive-item" id="map1"></div>
             </div>
             
             <!-- Map -->
             <div class="position-relative h-100 vw-50 float-right d-none d-md-block">
 
               <!-- Map -->
-              <div class="h-100 w-100" data-toggle="map" data-options='{"center": [-118.244615, 34.052979], "zoom": 12}'></div>
+              <div class="h-100 w-100" id="map2"></div>
               
               <!-- Shape -->
               <div class="shape shape-right shape-fluid-y svg-shim text-light">
@@ -702,6 +702,24 @@
 
     <!-- Map -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZXRyYWRpbmciLCJhIjoiY2s2YnJzYnhkMGN1ZzNlczB4ZXBkZDVnaSJ9.gXkxulp4beBE4g5vA0kFlg';
+        var map = new mapboxgl.Map({
+        container: 'map2',
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-123.1107, 49.2627], // starting position [lng, lat]
+        zoom: 10 // starting zoom
+        });
+    </script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZXRyYWRpbmciLCJhIjoiY2s2YnJzYnhkMGN1ZzNlczB4ZXBkZDVnaSJ9.gXkxulp4beBE4g5vA0kFlg';
+        var map = new mapboxgl.Map({
+        container: 'map1',
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-123.1107, 49.2627], // starting position [lng, lat]
+        zoom: 10 // starting zoom
+        });
+    </script>
 
     <!-- Theme JS -->
     <script src="https://landkit.goodthemes.co/assets/js/theme.min.js"></script>
